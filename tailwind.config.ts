@@ -19,6 +19,9 @@ const config: Config = {
       },
       animation: {
         aurora: "aurora 60s linear infinite",
+        shimmer: "shimmer 2s ease infinite",
+        scroll:
+          "scroll var(--animation-duration,40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         aurora: {
@@ -27,6 +30,19 @@ const config: Config = {
           },
           to: {
             backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+        shimmer: {
+          from: {
+            backgroundPosition: "0% 50%",
+          },
+          to: {
+            backgroundPosition: "200% 50%",
+          },
+        },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
           },
         },
       },
